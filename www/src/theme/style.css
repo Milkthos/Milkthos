@@ -33,5 +33,40 @@ body {
 .boots {
     display: flex;
     flex-direction: row;
+    justify-content: center;
+    --td: 0.15s
+}
+
+.boots > a {
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
     align-items: center;
+    transition-duration: var(--td);
+}
+
+.boots > a:hover {
+    transform: translateY(-0.5rem);
+  }
+  
+.boots > a > sub {
+    position: absolute;
+    bottom: -1rem;
+    opacity: 0;
+    transition-duration: var(--td);
+  }
+
+.boots > a:hover > sub {
+    bottom: -1.25rem;
+    opacity: 1;
+  }
+
+.divider1 {
+    border: 2px solid red;
+    border-radius: 5px;
+    border-style: double;
+}
+
+svg {
+    color: red;
 }
